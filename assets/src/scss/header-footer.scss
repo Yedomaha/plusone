@@ -1,0 +1,109 @@
+/*2. header*/
+
+.header {
+  padding: 25px 0 31px;
+  @include media(768px){
+    padding: 13px 0;
+  }
+}
+
+/*3. footer */
+
+.footer {
+  padding: 26px 0;
+  background: #F8F8F2;
+  @include media(768px){
+    padding: 33px 0 10px 0;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    @include media(768px){
+      flex-wrap: wrap;
+    }
+  }
+  &__address {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #202848;
+    @include media(768px){
+      width: 100%;
+      text-align: center;
+      margin-bottom: 56px;
+    }
+  }
+  &__social-list-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:before{
+      @include media(768px){
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 43px;
+        height: 3px;
+        border-radius: 3px;
+        background-color: #202848;
+      }
+    }
+    @include media(768px){
+      padding: 27px 0;
+      width: 100%;
+      position: relative;
+    }
+  }
+  &__social-list {
+    display: flex;
+    @include media(768px){
+      justify-content: center;
+    }
+  }
+  &__social-item {
+    margin-right: 11px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__social-link {
+    &:before {
+      content: "";
+      display: block;
+      width: 28px;
+      height: 28px;
+      transition: opacity 0.3s;
+    }
+    &:hover:before {
+      opacity: 0.7;
+    }
+    &--fb {
+      &:before {
+        background: url("img/fb.png") no-repeat center;
+        background-size: contain;
+      }
+    }
+    &--youtube {
+      &:before {
+        background: url("img/youtube.svg") no-repeat center;
+        background-size: contain;
+      }
+    }
+    &--inst {
+      &:before {
+        background: url("img/inst.svg") no-repeat center;
+        background-size: contain;
+      }
+    }
+    &--telegram {
+      &:before {
+        background: url("img/telegram.svg") no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@mixin media($media)
+{
+  @media only screen and (max-width: $media) {
+    @content
+  }
+}
+
+@mixin media-h($media)
+{
+  @media only screen and (max-height: $media) {
+    @content
+  }
+}
